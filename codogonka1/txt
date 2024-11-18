@@ -1,0 +1,4 @@
+buffer := make([]byte, 8)
+n, _ := reader.Read(buffer) // n может быть меньше 8
+fmt.Println(buffer[:n])     // Используем только первые n байт
+fmt.Println(buffer)         // Весь буфер может содержать измененные данные
